@@ -1,5 +1,6 @@
 import 'package:cepu_doc/components/my_button_1.dart';
 import 'package:cepu_doc/components/my_textfield_1.dart';
+import 'package:cepu_doc/components/square_tile.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -80,15 +81,43 @@ class LoginPage extends StatelessWidget {
               const SizedBox(height: 50),
 
               // Metode Login Lainya
-              Row(
-                  children: [
-                    Expanded(child: Divider(
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                child: Row(
+                    children: [
+                      Expanded(
+                          child: Divider(
+                            thickness: 0.5,
+                            color: Colors.grey[400],
+                          )
+                      ),
+                      Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                        child: Text(
+                          "Atau Login Dengan",
+                          style: TextStyle(color: Colors.grey[700]),
+                        ),
+                      ),
+                      Expanded(
+                          child: Divider(
+                            thickness: 0.5,
+                            color: Colors.grey[400],
+                          )
+                      )
+                    ],
+                  ),
+              ),
 
-                    )
-                  )
-                  ],
-                ),
-              ],
+              const SizedBox(height: 50),
+
+              // Metode Google Login
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SquareTile(imagePath: 'lib/assets/images/google_logo.png'),
+                ],
+              )
+            ],
           ),
         ),
       )
