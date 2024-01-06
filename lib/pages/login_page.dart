@@ -74,6 +74,7 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
 
+              const SizedBox(height: 25),
 
               // Button Login
               MyButton1(onTap: loginUser, buttonText: "Login"),
